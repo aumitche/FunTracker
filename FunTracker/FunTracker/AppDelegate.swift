@@ -15,14 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
 	var window: UIWindow?
 
-	//2. Add a property to hold the beacon manager and instantiate it
-	let beaconManager = ESTBeaconManager()
+	let beaconManager = ESTBeaconManager() //Hold and instantiate the beacon manager
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		//3. Set the beacon manager's delegate
 		self.beaconManager.delegate = self
 		self.beaconManager.requestAlwaysAuthorization()
+		
+		print("Add beacons to be monitored")
+		//These are the beacons (and their IDs) that we each user's phone will be monitoring.
+		self.beaconManager.startMonitoringForRegion(CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 58178, minor: 930, identifier: "purple"))
+		self.beaconManager.startMonitoringForRegion(CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 61445, minor: 10441, identifier: "green"))
+		
+		UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert, categories: nil))
+		
 		return true
 	}
 
@@ -48,6 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
-
+	func beaconManager(manager: AnyObject!, didEnterRegion region: CLBeaconRegion!) {
+		let notification = UILocalNotification()
+		notification.alertBody = "Detected Beacon"
+		UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+	}
+	
 }
 

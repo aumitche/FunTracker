@@ -13,6 +13,7 @@
 		A207E46D1BBF78DF00324163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A207E46C1BBF78DF00324163 /* Assets.xcassets */; };
 		A207E4701BBF78DF00324163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A207E46E1BBF78DF00324163 /* LaunchScreen.storyboard */; };
 		A23796C21BBF8D0C0055CCAF /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23796C11BBF8D0C0055CCAF /* EstimoteSDK.framework */; settings = {ASSET_TAGS = (); }; };
+		A23796C41BBF8F890055CCAF /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23796C31BBF8F890055CCAF /* EstimoteSDK.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A207E4711BBF78DF00324163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23796C01BBF89440055CCAF /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		A23796C11BBF8D0C0055CCAF /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		A23796C31BBF8F890055CCAF /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23796C21BBF8D0C0055CCAF /* EstimoteSDK.framework in Frameworks */,
+				A23796C41BBF8F890055CCAF /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		A207E4591BBF78DF00324163 = {
 			isa = PBXGroup;
 			children = (
+				A23796C31BBF8F890055CCAF /* EstimoteSDK.framework */,
 				A23796C11BBF8D0C0055CCAF /* EstimoteSDK.framework */,
 				A207E4641BBF78DF00324163 /* FunTracker */,
 				A207E4631BBF78DF00324163 /* Products */,
